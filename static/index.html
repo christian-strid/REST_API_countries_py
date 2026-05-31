@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Countries API</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <main class="page-container">
+        <header class="page-header">
+            <h1>Världens länder</h1>
+        </header>
+
+        <section class="controls">
+
+            <!-- <input id="searchInput" type="text" placeholder="Sök efter land..."> -->
+
+            <select id="regionFilter">
+                <option value="">Alla regioner</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+                <option value="Antarctic">Antarctic</option>
+            </select>
+
+            <select id="sortSelect">
+                <option value="name">Sortera efter land</option>
+                <option value="population">Sortera efter population</option>
+                <option value="region">Sortera efter region</option>
+            </select>
+
+            <select id="directionSelect">
+                <option value="asc">Stigande</option>
+                <option value="desc">Fallande</option>
+            </select>
+
+            <label class="toggle-control">
+                <input type="checkbox" id="visitedOnlyToggle">
+                <span>Visa endast besökta länder</span>
+            </label>
+
+        </section>
+
+        <section class="countries-section">
+            <button id="previousPageButton" class="page-button">←</button>
+
+            <ul id="countriesList" class="countries-grid"></ul>
+
+            <button id="nextPageButton" class="page-button">→</button>
+        </section>
+
+
+        <footer class="page-footer">
+            <p id="pageInfo" class="page-info"></p>
+        </footer>
+    </main>
+
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

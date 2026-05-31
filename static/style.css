@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #afafaf;
+    color: #222;
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: #eceff1;
+}
+
+.page-header {
+    background-color: #263238;
+    color: white;
+    padding: 12px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+    position: sticky;
+    top: 0;
+}
+
+.page-footer {
+    margin-top: 12px;
+    padding: 12px;
+    text-align: center;
+    color: #607d8b;
+    position: sticky;
+    bottom: 0;
+    background-color: #eceff1;
+}
+
+.page-header h1 {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.controls input,
+.controls select {
+    padding: 12px;
+    border: 1px solid #cfd8dc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.countries-section {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: center;
+}
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: stretch;
+}
+
+.country-card {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    background-color: white;
+    border: 1px solid #dce3e8;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.country-card:hover {
+    border-color: #b0bec5;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.country-card.visited-card {
+    border: 2px solid #4caf50;
+}
+
+.country-card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.country-card-header h2 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+    line-height: 1.15;
+    min-height: 48px;
+}
+
+.country-card-header span {
+    font-size: 14px;
+    color: #607d8b;
+}
+
+.visited-badge {
+    background-color: #4caf50;
+    color: white !important;
+    padding: 6px 10px;
+    border-radius: 999px;
+    align-self: start;
+}
+
+.country-card-body p {
+    margin: 6px 0;
+}
+
+.country-card-actions {
+    display: grid;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.country-card-actions input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cfd8dc;
+    border-radius: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mark-button {
+    background-color: #1976d2;
+    color: white;
+}
+
+.mark-button:hover {
+    background-color: #1565c0;
+}
+
+.save-button {
+    background-color: #455a64;
+    color: white;
+}
+
+
+.remove-visited-button {
+    background-color: #e53935;
+    color: white;
+}
+
+.remove-visited-button:hover {
+    background-color: #c62828;
+}
+
+.page-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #263238;
+    color: white;
+    font-size: 22px;
+}
+
+.page-button:hover:not(:disabled) {
+    background-color: #1b2328;
+    transform: scale(1.05);
+}
+
+.page-button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.page-info {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+.toggle-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    border: 1px solid #cfd8dc;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.toggle-control input {
+    width: auto;
+}
+
+@media (max-width: 700px) {
+    .countries-section {
+        grid-template-columns: 1fr;
+    }
+
+    .page-button {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
